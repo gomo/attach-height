@@ -12,6 +12,8 @@
             elems.height(elems.width() * op.ratio);
         };
 
+        elems.data('attachHeight', attach);
+
         attach();
 
         var timer = false;
