@@ -9,7 +9,9 @@
 
         var elems = this;
         var attach = function(){
-            elems.height(elems.width() * op.ratio);
+            setTimeout(function(){
+                elems.height(elems.width() * op.ratio);
+            }, 0);
         };
 
         elems.data('attachHeight', attach);
@@ -27,9 +29,7 @@
         });
 
         window.onorientationchange = function() {
-            setTimeout(function(){
-                attach();
-            }, 0);
+            attach();
         };
     };
 
